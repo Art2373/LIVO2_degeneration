@@ -1,0 +1,493 @@
+{
+  "release": "LIVO2_degeneration-1.0.0-migration-20261012",
+  "ros_package": "livo2_degeneration",
+  "node": "fusion_mapping",
+  "message": "livo2_degeneration/FusionModel",
+  "configuration": {
+    "management_enabled": true,
+    "feedback_mode": "measurement_commit_v1",
+    "recovery_schedule": "burst",
+    "reference_lifecycle": "withdrawal clears, probing rebuilds"
+  },
+  "frozen_runtime_source_sha256": {
+    "src/IMU_Processing.cpp": "6412d960f2439c1d6ada9ed95abb7e59646a0c707b47e70da19e5fb19d77d127",
+    "src/LIVMapper.cpp": "7efaff40af70bbbdc3c2989ae3cbf9ffba8d53040288c90d2cfeba52ecc14065",
+    "src/frame.cpp": "e261c4ff73e056469cc2102c189c27f73d1b637d8ee47e78745a000f2356dfe6",
+    "src/fusion_model.cpp": "81700c5241c23023d794a7b6d477a41c76da87b39b6cfc5f4d5f65058a6bd844",
+    "src/main.cpp": "ea51cfd3e92363a87f36790aa9314a36ad39f4d7c51002dc19d62ae0a182e8f8",
+    "src/measurement_scheduler.cpp": "a8e78c3f6ccd4d35d00f77a190959f87212b036e92fa5974a8b28fedb07f80b8",
+    "src/preprocess.cpp": "341805d9a12f8f8b5c496d76560752d4af206adf08828119a8ff6b21dd87968e",
+    "src/vio.cpp": "b5e9704caea9172c6cf28cf3abb3aaa0cbcf2e8eca3f7e98e608a1209770a9b2",
+    "src/visual_point.cpp": "cd97f68a7524eb74ce705b5cca70fccf4fb2082d2919875a14b6dc0802e60796",
+    "src/voxel_map.cpp": "f32ea6bcefface71d8521bac059b663811e03cd62c65a4f635956aaa3bcbb1f6",
+    "include/IMU_Processing.h": "7da70fbb1ea5ffdee48885bce82b5ce99190bd22401f5cb7426c9e880ee8bdb9",
+    "include/LIVMapper.h": "49e6245822a1314a39c1cc7943685d08ab42bc896199f071c4094973ed36f70e",
+    "include/common_lib.h": "8b2372b714b7289137755f0b8c779945f34a2dc30d5e0f9945434cb1abe01b58",
+    "include/feature.h": "2677c2ff3d780935cb92c46f301fc32adbc42fb153c5c0883c84d6f42018c18e",
+    "include/frame.h": "a56616acb7cb4915bf989add3c280f7b62e50d937e756125e56864d76096d2ef",
+    "include/image_retention.h": "15cf7fd704d1a6cfdd1862052128bc86b4af5dfa3561993296cab69de0fb67ab",
+    "include/livox_message.h": "4ce39e308328d9568006c865db0231f6d0bd85e2f4cd91e87c984aa791646eb6",
+    "include/livox_ros_driver/CustomMsg.h": "e00bfb1aac212333e2e4aca6794144927ef7a9b85ef36067f0c23efd25091404",
+    "include/livox_ros_driver/CustomPoint.h": "f204153eadfb5a9466bdcdff41030bf792daf4ae1d65513da90b8bd3fcf11e89",
+    "include/livox_ros_driver/LICENSE.txt": "a59519135db72316a2055c30723a102e9970baa2457e39078c413a8cca9d4ef1",
+    "include/preprocess.h": "ecc7b4cccbed4bd55b6af41b1a48ed370f01975eae6543f6ce4d68e4d483d4f2",
+    "include/runtime_paths.h": "d26db0dd0d98ff6f05651ba06a3228bb89aaad92ea7c0c7fd2779580369116fc",
+    "include/sensor_time.h": "a9ca072d232a306c6cdea16f6245e5960e0673f1f5a40c24285c74eb83fb1629",
+    "include/utils/color.h": "9d5cb4feee93aa4e517af1aad750f6eaa016ce56dc6504a1ac34e63774fb2401",
+    "include/utils/so3_math.h": "a18afdc2f3438b1fd5ffdb82e9ede95d173b6f93e106687e648cff7e483c78af",
+    "include/utils/types.h": "b91aa1727a380b7191c6850c7d32134e3d9165e0f52bdac13fc29a345c83b804",
+    "include/vio.h": "e7c09c6fe4533b4ce20ddc41690c7fccdffb7d2ca7ca72c99981a2aa941f56df",
+    "include/visual_lifecycle.h": "72adb4ef4f570b15fd9260b31fa373d36dbe691695198c9211af23897f658859",
+    "include/visual_point.h": "80c90a0a274808bd5bd287bda0205445ed5b572639cb809c85390331cd8711e0",
+    "include/visual_update_result.h": "cecd9af35ede7750aa0849c4cf98602dbbe8990b4cebb75b67f1fbc97a4f6a8d",
+    "include/voxel_map.h": "232b74078cffb5ca531b7dbd6ccbb739256cd20c5e001bef25918125b7db37b2",
+    "msg/FusionModel.msg": "ddcc143f8b1c2c1ac5290cac1aad5bf67015b64179158e5c5217e25c775e0ce7",
+    "python/livo2_degeneration/__init__.py": "142b3d3d155060c24eb48a85284205a5ce2511095982261663087ccb4fb6636a",
+    "python/livo2_degeneration/camera_model.py": "654ab03e0e8a59bead4fc68684acc81e8ba902fc3d14c324319755e0f9daeff2",
+    "python/livo2_degeneration/fusion_model.py": "d7d51f01c5c8b81b8a5b8984c1625554582bddb7e1949438b09622a1aa5ca742",
+    "scripts/fusion_parameter_provider.py": "f5bfb7d6c5d3eaf286023773f5397817e0b46c14f7596d92b53931177311831c",
+    "scripts/publish_camera_info.py": "958e51b86cdc1d750b7dee4060fbb157c2cec5937ac3a5cb9805700d6d9b3586",
+    "launch/fusion_model.launch": "98b6a35593eb9562bcd51fdc288e5c9e1239ab64b8569b606c1b57a581ebcaef",
+    "launch/m3dgr_input.launch": "20f33df6a8f057bec3f0ad50e4f86f74f455d03c2e6db10100e823e454431643",
+    "launch/mapping_m3dgr.launch": "1b26ea0e6c06abc2a23c550384a8df9a645f17331fd15dad4564a5ff26befa50",
+    "config/m3dgr/camera_info.yaml": "f4d33de9cd46bd74c4b9b3dc988ee89ea55f1bc0963ac1b496eab2a869df5d0f",
+    "config/m3dgr/common.yaml": "c9a8c67ef656e0823f2dbeac24749a368172d7c5f57a9634d255d90659d713a1",
+    "config/m3dgr/reference.yaml": "042c97516b55e7cf0bb0d3fd1b177904a986472e5436b0224649bfcc88f01069",
+    "config/management.yaml": "20038de9480c0042e67d9188809936aa14273250d6bcdf63047d747738cd0f0a",
+    "tools/build.sh": "cedb74d2e871220877afaf68c9b8d0bf7f6a1ce2a3694330d7048f2b4a80428f",
+    "tools/check_environment.py": "5f12fc2b3c466d7b637199112b51f94aa282639c50b7d472cad687e650e97f95",
+    "tools/env.sh": "38c56b227c55d3321277d883fddf9ac1f0ff656448f30e75390b5c5228967826",
+    "tools/regression/README.md": "f36f7db84b65f8ce7c999893e77dbff6fb650b90de137d8e2aa8d7a67692f790",
+    "tools/regression/analyze.py": "40bced866e805ae4f0ad15718d6a001eaefc382d10f2aaf90d46612bd3629509",
+    "tools/regression/batch.py": "a681e17fe517910ca7775eb4e418075377d263b7a1ab8289fdfe460df14b7dde",
+    "tools/regression/image_gate.py": "03fdfd6431ad8d8b26248394603ad83933c8347ad05271c8f70c9934c7f1d753",
+    "tools/regression/inputs.py": "67f924bb683edbb562381be1220b0933e8584f28ea3186f570b14e7dd1bca21e",
+    "tools/regression/metrics.py": "ad6a16e198551a667b6e9231b54a609d6b39cc657f550cccf5a65fd33de213fa",
+    "tools/regression/monitor.py": "67b5c20ba1417f210d7e5675977f557dfc7b2b52f60d07521328d3274867a87e",
+    "tools/regression/observer.py": "1d40072c85f886439f1832e594618089b669153e44ae1e09eef9c3bfe16de5aa",
+    "tools/regression/pixel_witness.py": "377dfaf9466f6c6982d5e1d0d11e9106c2e8d8a63fcc9ffcc98a83493360cbf0",
+    "tools/regression/queue_audit.py": "50890ee408db8aa2791b12df5ce9c45c2cdec379092875fa677a1becc54836aa",
+    "tools/regression/register.py": "399e66715fd4f13fdbb38da067dbb357a0415a4e6942d02521de5d81a6f8e2d8",
+    "tools/regression/run.py": "f84278f4c099511271f9e3af7c358496e166b45655333ae9d6bb3f6f0ba0f1ec",
+    "tools/regression/summary_helpers.py": "afe38e7121a3b65677aa8aad5cfae530cdf1567a02b4979ecc7021ffb0ef36d9",
+    "tools/regression/test_analysis.py": "4a51e0c2168fdf189f5609666a922b351eb448c6f929fda1adf35fd22b750415",
+    "tools/regression/test_runtime.py": "b8f72b0911bd159f3345fca49732578849752f449ae7ec25cfdb34a32300d41b",
+    "tools/test.sh": "1ba951e92818e6725ae02faa6eb4b9ff66067504121e7a5fe547b05dd62c387a",
+    "CMakeLists.txt": "cc8893c461dca2c058e419f1d67680b4dc5d12ec28b34c984f99f46d4bfa9a02",
+    "package.xml": "8f813d61e957a797c00f3f8943bc5932fdb3ab1227c56faf6e4d7b36587b9581",
+    "setup.py": "7ec5a39803f520f462c44642bd45f8818964656a0df504708348525affd576e7"
+  },
+  "artifacts": {
+    "devel/lib/livo2_degeneration/fusion_mapping": {
+      "size": 52192,
+      "sha256": "c8d001990cdddb0ac01c6a9509aafd943d5f19206b0fc7727e5c0e719b233161"
+    },
+    "devel/lib/libdegeneration_pre.so": {
+      "size": 146808,
+      "sha256": "82ced621c8ce3f80a9b785a2c23837a44642265b7cf736acba351e060b8a50b4"
+    },
+    "devel/lib/libdegeneration_vio.so": {
+      "size": 286816,
+      "sha256": "85b3bf10bbf138e8596d43947b671baf3f7f5070053d8bea80ca3c1022739a72"
+    },
+    "devel/lib/libdegeneration_lio.so": {
+      "size": 388672,
+      "sha256": "e7ba5568286072b9ab521d90422d0f939d1d335ab2911900f99d46fc5e4ec307"
+    },
+    "devel/lib/libdegeneration_imu_proc.so": {
+      "size": 126584,
+      "sha256": "0b2af396ffd594e8578ce14dca8dd3ff208418c9f3cf87118f0863b9a13e6680"
+    },
+    "devel/lib/libdegeneration_laser_mapping.so": {
+      "size": 848456,
+      "sha256": "91289d3751761640b5a461775c12ef5f9361b441e8eecc02e46963f15fe89cb5"
+    }
+  },
+  "build": {
+    "independent_workspace": true,
+    "compile_units": 39,
+    "driver2": true,
+    "opencv": "4.5.4",
+    "tests_cpp_passed": 6,
+    "runtime_unit_tests_passed": 5,
+    "analysis_boundary_checks_passed": true
+  },
+  "regression": {
+    "overview": [
+      {
+        "case": "H",
+        "completed": true,
+        "child_exits": {
+          "master": 0,
+          "image_gate": 0,
+          "nodes": 0,
+          "observer": 0,
+          "monitor": 0,
+          "pixel_witness": 0,
+          "reference_service_01": 0,
+          "player": 0
+        },
+        "calls": 1061,
+        "A": 1041,
+        "B": 1041,
+        "C": 1041,
+        "A_not_retained": 20,
+        "A_coverage": 0.9908256880733946,
+        "B_coverage": 0.9908256880733946,
+        "C_coverage": 0.9908256880733946,
+        "denominator": 109,
+        "withdrawals": 1,
+        "lio_calls": 2289,
+        "lio_effective": 2289,
+        "lio_duplicates": 0,
+        "lio_backwards": 0,
+        "lio_nonfinite": 0,
+        "max_lio_state_gap": 0.10120868682861328,
+        "max_lio_wall_gap": 0.43633103370666504,
+        "queue_pass": true,
+        "feedback_pass": true,
+        "queue_maximum": 8,
+        "policy_ignored": 0,
+        "zero_info_success": 0,
+        "zero_info_refresh": 0,
+        "zero_info_failure_cleared": 0,
+        "zero_increment_info": 0,
+        "zero_increment_credit": 0
+      },
+      {
+        "case": "R",
+        "completed": true,
+        "child_exits": {
+          "master": 0,
+          "image_gate": 0,
+          "nodes": 0,
+          "observer": 0,
+          "monitor": 0,
+          "pixel_witness": 0,
+          "reference_service_01": 0,
+          "player": 0
+        },
+        "calls": 997,
+        "A": 983,
+        "B": 983,
+        "C": 983,
+        "A_not_retained": 14,
+        "A_coverage": 0.9357798165137615,
+        "B_coverage": 0.9357798165137615,
+        "C_coverage": 0.9357798165137615,
+        "denominator": 109,
+        "withdrawals": 1,
+        "lio_calls": 2225,
+        "lio_effective": 2225,
+        "lio_duplicates": 0,
+        "lio_backwards": 0,
+        "lio_nonfinite": 0,
+        "max_lio_state_gap": 0.10120868682861328,
+        "max_lio_wall_gap": 0.4315316677093506,
+        "queue_pass": true,
+        "feedback_pass": true,
+        "queue_maximum": 8,
+        "policy_ignored": 0,
+        "zero_info_success": 0,
+        "zero_info_refresh": 0,
+        "zero_info_failure_cleared": 0,
+        "zero_increment_info": 0,
+        "zero_increment_credit": 0
+      },
+      {
+        "case": "B",
+        "completed": true,
+        "child_exits": {
+          "master": 0,
+          "image_gate": 0,
+          "nodes": 0,
+          "observer": 0,
+          "monitor": 0,
+          "pixel_witness": 0,
+          "reference_service_01": 0,
+          "player": 0
+        },
+        "calls": 1018,
+        "A": 970,
+        "B": 966,
+        "C": 966,
+        "A_not_retained": 48,
+        "A_coverage": 0.926605504587156,
+        "B_coverage": 0.926605504587156,
+        "C_coverage": 0.926605504587156,
+        "denominator": 109,
+        "withdrawals": 4,
+        "lio_calls": 2245,
+        "lio_effective": 2245,
+        "lio_duplicates": 0,
+        "lio_backwards": 0,
+        "lio_nonfinite": 0,
+        "max_lio_state_gap": 0.10120868682861328,
+        "max_lio_wall_gap": 0.442838191986084,
+        "queue_pass": true,
+        "feedback_pass": true,
+        "queue_maximum": 8,
+        "policy_ignored": 0,
+        "zero_info_success": 0,
+        "zero_info_refresh": 0,
+        "zero_info_failure_cleared": 0,
+        "zero_increment_info": 0,
+        "zero_increment_credit": 0
+      },
+      {
+        "case": "S",
+        "completed": true,
+        "child_exits": {
+          "master": 0,
+          "image_gate": 0,
+          "nodes": 0,
+          "observer": 0,
+          "monitor": 0,
+          "pixel_witness": 0,
+          "reference_service_01": 0,
+          "player": 0,
+          "reference_service_02": 0
+        },
+        "calls": 999,
+        "A": 979,
+        "B": 979,
+        "C": 979,
+        "A_not_retained": 20,
+        "A_coverage": 0.9357798165137615,
+        "B_coverage": 0.9357798165137615,
+        "C_coverage": 0.9357798165137615,
+        "denominator": 109,
+        "withdrawals": 1,
+        "lio_calls": 2227,
+        "lio_effective": 2227,
+        "lio_duplicates": 0,
+        "lio_backwards": 0,
+        "lio_nonfinite": 0,
+        "max_lio_state_gap": 0.10120868682861328,
+        "max_lio_wall_gap": 0.43481993675231934,
+        "queue_pass": true,
+        "feedback_pass": true,
+        "queue_maximum": 8,
+        "policy_ignored": 0,
+        "zero_info_success": 0,
+        "zero_info_refresh": 0,
+        "zero_info_failure_cleared": 0,
+        "zero_increment_info": 0,
+        "zero_increment_credit": 0
+      }
+    ],
+    "mechanisms": [
+      {
+        "case": "H",
+        "delivered_images": 3696,
+        "actual_black_images": 0,
+        "black_calls": 0,
+        "black_zero_pose_information_calls": 0,
+        "black_nonzero_pose_information_calls": 0,
+        "black_zero_information_feedback_violations": 0,
+        "black_A": 0,
+        "black_B": 0,
+        "black_C": 0,
+        "black_refresh": 0,
+        "black_failure_clear": 0,
+        "black_calls_without_service": 0,
+        "black_calls_without_fresh_input": 0,
+        "gate_received": 3696,
+        "gate_forwarded": 3696,
+        "gate_dropped": 0,
+        "gate_altered": 0,
+        "pixel_stamps_monotonic": true,
+        "service_heartbeats_in_fixed_fault": 32
+      },
+      {
+        "case": "R",
+        "delivered_images": 3455,
+        "actual_black_images": 0,
+        "black_calls": 0,
+        "black_zero_pose_information_calls": 0,
+        "black_nonzero_pose_information_calls": 0,
+        "black_zero_information_feedback_violations": 0,
+        "black_A": 0,
+        "black_B": 0,
+        "black_C": 0,
+        "black_refresh": 0,
+        "black_failure_clear": 0,
+        "black_calls_without_service": 0,
+        "black_calls_without_fresh_input": 0,
+        "gate_received": 3695,
+        "gate_forwarded": 3455,
+        "gate_dropped": 240,
+        "gate_altered": 0,
+        "pixel_stamps_monotonic": true,
+        "service_heartbeats_in_fixed_fault": 32
+      },
+      {
+        "case": "B",
+        "delivered_images": 3695,
+        "actual_black_images": 239,
+        "black_calls": 36,
+        "black_zero_pose_information_calls": 36,
+        "black_nonzero_pose_information_calls": 0,
+        "black_zero_information_feedback_violations": 0,
+        "black_A": 4,
+        "black_B": 0,
+        "black_C": 0,
+        "black_refresh": 0,
+        "black_failure_clear": 0,
+        "black_calls_without_service": 0,
+        "black_calls_without_fresh_input": 0,
+        "gate_received": 3695,
+        "gate_forwarded": 3695,
+        "gate_dropped": 0,
+        "gate_altered": 239,
+        "pixel_stamps_monotonic": true,
+        "service_heartbeats_in_fixed_fault": 32
+      },
+      {
+        "case": "S",
+        "delivered_images": 3696,
+        "actual_black_images": 0,
+        "black_calls": 0,
+        "black_zero_pose_information_calls": 0,
+        "black_nonzero_pose_information_calls": 0,
+        "black_zero_information_feedback_violations": 0,
+        "black_A": 0,
+        "black_B": 0,
+        "black_C": 0,
+        "black_refresh": 0,
+        "black_failure_clear": 0,
+        "black_calls_without_service": 0,
+        "black_calls_without_fresh_input": 0,
+        "gate_received": 3696,
+        "gate_forwarded": 3696,
+        "gate_dropped": 0,
+        "gate_altered": 0,
+        "pixel_stamps_monotonic": true,
+        "service_heartbeats_in_fixed_fault": 0
+      }
+    ],
+    "criteria": [
+      {
+        "case": "H",
+        "ability": "natural_EOF_and_child_cleanup",
+        "status": "verified"
+      },
+      {
+        "case": "H",
+        "ability": "nonempty_LIO_and_finite_monotonic_state",
+        "status": "verified"
+      },
+      {
+        "case": "H",
+        "ability": "observed_queue_identity_and_bound",
+        "status": "verified"
+      },
+      {
+        "case": "H",
+        "ability": "observed_feedback_invariants",
+        "status": "verified"
+      },
+      {
+        "case": "R",
+        "ability": "natural_EOF_and_child_cleanup",
+        "status": "verified"
+      },
+      {
+        "case": "R",
+        "ability": "nonempty_LIO_and_finite_monotonic_state",
+        "status": "verified"
+      },
+      {
+        "case": "R",
+        "ability": "observed_queue_identity_and_bound",
+        "status": "verified"
+      },
+      {
+        "case": "R",
+        "ability": "observed_feedback_invariants",
+        "status": "verified"
+      },
+      {
+        "case": "R",
+        "ability": "restored_new_input_sustained_information_and_credit",
+        "status": "verified"
+      },
+      {
+        "case": "B",
+        "ability": "natural_EOF_and_child_cleanup",
+        "status": "verified"
+      },
+      {
+        "case": "B",
+        "ability": "nonempty_LIO_and_finite_monotonic_state",
+        "status": "verified"
+      },
+      {
+        "case": "B",
+        "ability": "observed_queue_identity_and_bound",
+        "status": "verified"
+      },
+      {
+        "case": "B",
+        "ability": "observed_feedback_invariants",
+        "status": "verified"
+      },
+      {
+        "case": "B",
+        "ability": "restored_new_input_sustained_information_and_credit",
+        "status": "verified"
+      },
+      {
+        "case": "B",
+        "ability": "black_zero_information_not_success",
+        "status": "verified"
+      },
+      {
+        "case": "S",
+        "ability": "natural_EOF_and_child_cleanup",
+        "status": "verified"
+      },
+      {
+        "case": "S",
+        "ability": "nonempty_LIO_and_finite_monotonic_state",
+        "status": "verified"
+      },
+      {
+        "case": "S",
+        "ability": "observed_queue_identity_and_bound",
+        "status": "verified"
+      },
+      {
+        "case": "S",
+        "ability": "observed_feedback_invariants",
+        "status": "verified"
+      },
+      {
+        "case": "S",
+        "ability": "restored_new_input_sustained_information_and_credit",
+        "status": "verified"
+      },
+      {
+        "case": "S",
+        "ability": "new_provider_session_and_model_epoch",
+        "status": "verified"
+      }
+    ]
+  },
+  "limitations": [
+    "One migration run per case on development Wheel-float01.",
+    "PROBING modifies the true filter; withdrawal preserves prior visual history.",
+    "Information commit is not accuracy or complete health truth.",
+    "Real pause, 1x, strict accuracy and general cross-configuration success remain unvalidated.",
+    "Retail management-on incompatibility remains an observed limitation."
+  ],
+  "source_publication": {
+    "label": "LIVO2_degeneration-1.0.0-publication-20261012",
+    "date": "2026-10-12",
+    "scope": "documentation and source distribution metadata only",
+    "original_source_zip_sha256": "243a59296a35ae247bb9ec780902a01ee1a33dd323b9ac8c6bbadb00f4dfc9cf",
+    "runtime_source_unchanged": true,
+    "new_build_or_replay": false,
+    "notes": "docs/SOURCE_PUBLICATION.md"
+  }
+}

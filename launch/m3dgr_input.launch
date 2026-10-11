@@ -1,0 +1,11 @@
+<launch>
+  <node pkg="image_transport" type="republish" name="m3dgr_rgb_decode"
+        args="compressed in:=/camera/color/image_raw raw out:=/camera/color/image_raw"
+        output="screen" required="true"/>
+  <node pkg="livo2_degeneration" type="publish_camera_info.py" name="dataset_camera_info"
+        output="screen" required="true">
+    <rosparam file="$(find livo2_degeneration)/config/m3dgr/camera_info.yaml"/>
+    <param name="color_topic" value="/camera/color/image_raw"/>
+    <param name="camera_info_topic" value="/camera/color/camera_info"/>
+  </node>
+</launch>

@@ -1,0 +1,12 @@
+# Packaging-only build wrapper, 2026-10-12. Sophus algorithms unchanged.
+cmake_minimum_required(VERSION 3.10)
+project(Sophus LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 11)
+find_package(Eigen3 REQUIRED)
+add_library(Sophus SHARED sophus/so2.cpp sophus/se2.cpp sophus/so3.cpp sophus/se3.cpp sophus/scso3.cpp sophus/sim3.cpp)
+target_include_directories(Sophus PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}> $<INSTALL_INTERFACE:include> ${EIGEN3_INCLUDE_DIR})
+target_compile_options(Sophus PRIVATE -O3 -Wall -Wno-unused-variable)
+install(TARGETS Sophus LIBRARY DESTINATION lib)
+install(DIRECTORY sophus DESTINATION include FILES_MATCHING PATTERN "*.h")
+configure_file(SophusConfig.cmake.in SophusConfig.cmake @ONLY)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/SophusConfig.cmake DESTINATION share/Sophus/cmake)

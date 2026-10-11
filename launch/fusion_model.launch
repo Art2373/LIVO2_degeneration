@@ -1,0 +1,10 @@
+<launch>
+  <arg name="run_dir"/>
+  <arg name="session_id"/>
+  <arg name="attach_time" default="0"/>
+  <arg name="reference" default="$(find livo2_degeneration)/config/m3dgr/reference.yaml"/>
+  <arg name="camera" default="$(find livo2_degeneration)/config/m3dgr/camera_info.yaml"/>
+  <arg name="common" default="$(find livo2_degeneration)/config/m3dgr/common.yaml"/>
+  <node pkg="livo2_degeneration" type="fusion_parameter_provider.py" name="fusion_parameter_provider" output="screen" required="true"
+    args="--run-dir $(arg run_dir) --session-id $(arg session_id) --attach-time $(arg attach_time) --reference $(arg reference) --camera $(arg camera) --common $(arg common)"/>
+</launch>

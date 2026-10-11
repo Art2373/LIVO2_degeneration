@@ -1,0 +1,38 @@
+LIVO2_degeneration — visual fusion degradation detection and recovery
+
+The LiDAR-inertial-visual frontend is derived from FAST-LIVO2 by hku-mars,
+Chunran Zheng and contributors. Existing author/copyright/license headers are
+retained. The root LICENSE is reproduced verbatim from the upstream-derived
+code distribution (GNU GPL version 2 text); this package is not relicensed as
+BSD. Existing upstream headers and their commercial-contact notices are not
+removed or replaced by this document.
+
+M3DGR dataset adaptation and dataset-provided sensor parameters are attributed
+to the M3DGR project (sjtuyinjie/M3DGR). Dataset files are not distributed here.
+
+Project-specific contributions concern measurement scheduling, final visual
+measurement/commit feedback, given-model service boundaries, and visual
+withdrawal/probing/recovery management. The main filter state dimension and
+update equations, pre-existing visual rejection and rollback are not claimed as
+new contributions.
+
+Bundled third-party source retains its own notices and licenses:
+- rpg_vikit / xuankuzcr fork: package manifests declare GPLv3; GPL-3 text included.
+- Sophus: Hauke Strasdat and contributors; MIT notices remain in each source.
+- cv_bridge: Willow Garage, Tal Regev, scikit-image and contributors; BSD notices
+  in source; src/module.hpp is Apache-2.0 (Open Source Robotics Foundation), and
+  bundled Boost compatibility headers are BSL-1.0. Both full texts are included.
+- compressed_image_transport: ROS perception contributors; package/source BSD.
+- Livox ROS Driver2 message definitions: Livox, MIT; original LICENSE.txt retained.
+- Legacy Livox ROS Driver generated type headers: Livox message definitions;
+  original 2019 driver LICENSE.txt retained under include/livox_ros_driver.
+
+The historical root LICENSE and individual third-party package licenses are
+not replaced by a single blanket license statement. Attribution, repository
+names, ROS wire-type names and third-party paper names are intentional naming
+exceptions. See docs/THIRD_PARTY.md and third_party/SOURCES.json.
+
+Packaging changes in this release (2026-10-12): independent ROS package and
+message namespace, standalone dependency build wrappers and runtime paths.
+Upstream source changes carry their original authorship; project change records
+are kept separately from the third-party license texts.

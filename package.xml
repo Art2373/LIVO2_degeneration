@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>livo2_degeneration</name><version>1.0.0</version>
+  <description>Visual fusion degradation detection and recovery frontend based on FAST-LIVO2.</description>
+  <!-- Placeholder contact: repository owner should replace before public release. -->
+  <maintainer email="noreply@example.invalid">LIVO2_degeneration maintainers</maintainer>
+  <license>GPL-2.0</license>
+  <author>Chunran Zheng and the hku-mars FAST-LIVO2 contributors</author>
+  <author>Ji Zhang (upstream odometry components)</author>
+  <url type="website">https://github.com/hku-mars/FAST-LIVO2</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+  <depend>geometry_msgs</depend><depend>nav_msgs</depend><depend>sensor_msgs</depend>
+  <depend>roscpp</depend><depend>rospy</depend><depend>std_msgs</depend><depend>tf</depend>
+  <depend>pcl_ros</depend><depend>eigen_conversions</depend>
+  <depend>vikit_common</depend><depend>vikit_ros</depend><depend>cv_bridge</depend>
+  <depend>image_transport</depend><depend>message_filters</depend><depend>livox_ros_driver2</depend>
+  <exec_depend>compressed_image_transport</exec_depend>
+  <exec_depend>python3-numpy</exec_depend><exec_depend>python3-scipy</exec_depend><exec_depend>python3-yaml</exec_depend>
+  <exec_depend>python3-opencv</exec_depend><exec_depend>python3-rospkg</exec_depend>
+  <exec_depend>rosbag</exec_depend><exec_depend>rosgraph_msgs</exec_depend><exec_depend>roslaunch</exec_depend>
+  <test_depend>rostest</test_depend>
+  <export/>
+</package>

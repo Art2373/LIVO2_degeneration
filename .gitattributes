@@ -1,0 +1,12 @@
+# Preserve the byte-identical frozen implementation and vendored source.
+# Only publication documents and executable Linux entry points normalize LF.
+* -text
+/.gitattributes text eol=lf
+/README.md text eol=lf
+/docs/METHOD.md text eol=lf
+/docs/SOURCE_PUBLICATION.md text eol=lf
+/tools/build.sh text eol=lf
+/tools/env.sh text eol=lf
+/tools/test.sh text eol=lf
+/scripts/fusion_parameter_provider.py text eol=lf
+/scripts/publish_camera_info.py text eol=lf

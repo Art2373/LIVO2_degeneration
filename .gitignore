@@ -1,0 +1,21 @@
+# Source-only release
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.o
+*.so
+*.so.*
+build/
+devel/
+install/
+log/
+logs/
+Log/
+*.bag
+*.bag.active
+*.pcd
+*.ply
+*.zip
+.catkin_tools/
+CMakeCache.txt
+CMakeFiles/

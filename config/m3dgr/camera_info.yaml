@@ -1,0 +1,45 @@
+# Full-resolution color model; no scale factor or time correction applied here.
+source_commit: e0cf7d59c9a5a3df515624034698d976abc26549
+width: 640
+height: 480
+frame_id: camera_color_optical_frame
+distortion_model: plumb_bob
+K:
+- 607.79772949218
+- 0.0
+- 328.79772949218
+- 0.0
+- 607.83526613281
+- 245.53321838378
+- 0.0
+- 0.0
+- 1.0
+D:
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+- 0.0
+R:
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+P:
+- 607.79772949218
+- 0.0
+- 328.79772949218
+- 0.0
+- 0.0
+- 607.83526613281
+- 245.53321838378
+- 0.0
+- 0.0
+- 0.0
+- 1.0
+- 0.0

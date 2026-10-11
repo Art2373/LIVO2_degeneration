@@ -1,0 +1,14 @@
+<launch>
+  <arg name="run_dir"/>
+  <arg name="run_id" default="fusion_run"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="decode" default="true"/>
+  <param name="use_sim_time" value="$(arg use_sim_time)"/>
+  <rosparam file="$(find livo2_degeneration)/config/m3dgr/common.yaml"/>
+  <rosparam file="$(find livo2_degeneration)/config/management.yaml"/>
+  <param name="dynamic_visual/trace_path" value="$(arg run_dir)/frontend.jsonl"/>
+  <param name="runtime/output_directory" value="$(arg run_dir)/native_output"/>
+  <param name="evo/seq_name" value="$(arg run_id)"/>
+  <include if="$(arg decode)" file="$(find livo2_degeneration)/launch/m3dgr_input.launch"/>
+  <node pkg="livo2_degeneration" type="fusion_mapping" name="fusion_mapping" output="screen" required="true"/>
+</launch>

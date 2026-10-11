@@ -1,0 +1,13 @@
+dynamic_visual:
+  management_enabled: true
+  feedback_mode: measurement_commit_v1
+  recovery_schedule: burst
+  schedule_trace_enabled: true
+  image_fresh_wall_s: 1.0
+  failure_count: 6
+  failure_span_sensor_s: 0.5
+  recovery_consecutive_effective: 3
+  recovery_span_sensor_s: 0.2
+  probe_vio_call_budget: 10
+  probe_sensor_span_s: 2.0
+  retry_cooldown_sensor_s: 1.0

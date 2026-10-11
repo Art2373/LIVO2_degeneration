@@ -1,0 +1,32 @@
+# Dataset-provided camera-to-LiDAR parameter source. M3DGR e0cf7d59c9a5a3df515624034698d976abc26549.
+# T_CL maps LiDAR to color optical. +0.1s is a reference setting, not timing ground truth.
+extrin_calib:
+  Rcl:
+  - 0.0722207
+  - -0.997387
+  - -0.0020542
+  - 0.521005
+  - 0.039482
+  - -0.85264
+  - 0.850493
+  - 0.060508
+  - 0.522494
+  Pcl:
+  - -0.0442358
+  - -0.411712
+  - 0.168568
+time_offset:
+  img_time_offset: 0.1
+laserMapping:
+  cam_model: Pinhole
+  cam_width: 640
+  cam_height: 480
+  scale: 0.5
+  cam_fx: 607.79772949218
+  cam_fy: 607.83526613281
+  cam_cx: 328.79772949218
+  cam_cy: 245.53321838378
+  cam_d0: 0.0
+  cam_d1: 0.0
+  cam_d2: 0.0
+  cam_d3: 0.0
